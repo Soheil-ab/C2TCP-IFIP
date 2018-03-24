@@ -1,0 +1,11 @@
+reset
+set logscale x
+set title "Verizon LTE Downlink"
+set logscale x
+set xlabel "95%tile Delay (ms)"
+set ylabel "Throughput (Mbps)"
+set xrange [*:*] reverse
+set yrange [0:*]
+set terminal svg size 220,220 dynamic enhanced fname 'arial'  fsize 10
+set output "95_pkt_sum-Verizon-LTE-driving.down.tr.tsv.svg"
+plot "<(sed -n '2p' sum-Verizon-LTE-driving.down.tr.tsv)" using 5:3:1 with labels offset -1,-1 tc rgb "#FF0000" point pointtype 1 ps 1 lc rgb "#FF0000" notitle, "<(sed -n '3p' sum-Verizon-LTE-driving.down.tr.tsv)" using 5:3:1 with labels offset 2,-0.8 tc rgb "#000080" point pointtype 4 ps 1 lc rgb "#000080" notitle, "<(sed -n '4p' sum-Verizon-LTE-driving.down.tr.tsv)" using 5:3:1 with labels offset -3,-0.2 tc rgb "#00FF00" point pointtype 2 ps 1 lc rgb "#00FF00" notitle, "<(sed -n '5p' sum-Verizon-LTE-driving.down.tr.tsv)" using 5:3:1 with labels offset 0,-1 tc rgb "#EE82EE" point pointtype 7 ps 1 lc rgb "#EE82EE" notitle, "<(sed -n '6p' sum-Verizon-LTE-driving.down.tr.tsv)" using 5:3:1 with labels offset 0,0.6 tc rgb "#FFA500" point pointtype 5 ps 1 lc rgb "#FFA500" notitle, "<(sed -n '7p' sum-Verizon-LTE-driving.down.tr.tsv)" using 5:3:1 with labels offset 0,-1 tc rgb "#000080" point pointtype 9 ps 1 lc rgb "#000080" notitle, "<(sed -n '8p' sum-Verizon-LTE-driving.down.tr.tsv)" using 5:3:1 with labels offset 0,-1 tc rgb "#0000FF" point pointtype 3 ps 1 lc rgb "#0000FF" notitle

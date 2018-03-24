@@ -1,0 +1,9 @@
+protocol	down	throughput	delay	delay_95th	avg_delay	avg_capacity
+Cubic	sum-TMobile-UMTS-driving.down.tr	2.02	31130	23114	8609	2.03
+NReno	sum-TMobile-UMTS-driving.down.tr	2.02	25844	18348	6949	2.03
+Vegas	sum-TMobile-UMTS-driving.down.tr	1.55	1905	88	35	2.03
+Verus	sum-TMobile-UMTS-driving.down.tr	1.91	7353	514	319	2.03
+Sprout	sum-TMobile-UMTS-driving.down.tr	0.93	1088	64	56	2.03
+BBR	sum-TMobile-UMTS-driving.down.tr	1.86	3391	246	112	2.03
+C2TCP	sum-TMobile-UMTS-driving.down.tr	1.75	1793	108	50	2.03
+Codel_Cubic	sum-TMobile-UMTS-driving.down.tr	1.69	1679	65	30	2.03

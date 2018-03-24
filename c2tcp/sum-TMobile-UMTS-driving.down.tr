@@ -1,0 +1,72 @@
+up-cubic
+Average capacity: 2.03 Mbits/s
+Average throughput: 2.02 Mbits/s (99.9% utilization)
+95th percentile per-packet queueing delay: 23114 ms
+95th percentile signal delay: 31130 ms
+average per packet delay: 8609 ms
+41
+928424
+++++++++++++++++++++++++++++++++
+up-newreno
+Average capacity: 2.03 Mbits/s
+Average throughput: 2.02 Mbits/s (99.9% utilization)
+95th percentile per-packet queueing delay: 18348 ms
+95th percentile signal delay: 25844 ms
+average per packet delay: 6949 ms
+41
+928424
+++++++++++++++++++++++++++++++++
+up-vegas
+Average capacity: 2.03 Mbits/s
+Average throughput: 1.55 Mbits/s (76.5% utilization)
+95th percentile per-packet queueing delay: 88 ms
+95th percentile signal delay: 1905 ms
+average per packet delay: 35 ms
+40
+928424
+++++++++++++++++++++++++++++++++
+down-verus
+Average capacity: 2.03 Mbits/s
+Average throughput: 1.91 Mbits/s (94.2% utilization)
+95th percentile per-packet queueing delay: 514 ms
+95th percentile signal delay: 7353 ms
+average per packet delay: 319 ms
+43
+928424
+++++++++++++++++++++++++++++++++
+up-sprout
+Average capacity: 2.03 Mbits/s
+Average throughput: 0.93 Mbits/s (45.8% utilization)
+95th percentile per-packet queueing delay: 64 ms
+95th percentile signal delay: 1088 ms
+average per packet delay: 56 ms
+491
+928424
+++++++++++++++++++++++++++++++++
+up-bbr
+Average capacity: 2.03 Mbits/s
+Average throughput: 1.86 Mbits/s (92.1% utilization)
+95th percentile per-packet queueing delay: 246 ms
+95th percentile signal delay: 3391 ms
+average per packet delay: 112 ms
+42
+928424
+++++++++++++++++++++++++++++++++
+up-c2tcp
+Average capacity: 2.03 Mbits/s
+Average throughput: 1.75 Mbits/s (86.6% utilization)
+95th percentile per-packet queueing delay: 108 ms
+95th percentile signal delay: 1793 ms
+average per packet delay: 50 ms
+42
+928424
+++++++++++++++++++++++++++++++++
+up-codel
+Average capacity: 2.03 Mbits/s
+Average throughput: 1.69 Mbits/s (83.2% utilization)
+95th percentile per-packet queueing delay: 65 ms
+95th percentile signal delay: 1679 ms
+average per packet delay: 30 ms
+40
+928424
+++++++++++++++++++++++++++++++++

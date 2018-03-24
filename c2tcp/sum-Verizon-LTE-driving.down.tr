@@ -1,0 +1,72 @@
+up-cubic
+Average capacity: 9.74 Mbits/s
+Average throughput: 9.66 Mbits/s (99.1% utilization)
+95th percentile per-packet queueing delay: 5356 ms
+95th percentile signal delay: 11236 ms
+average per packet delay: 1678 ms
+41
+1363038
+++++++++++++++++++++++++++++++++
+up-newreno
+Average capacity: 9.74 Mbits/s
+Average throughput: 9.69 Mbits/s (99.4% utilization)
+95th percentile per-packet queueing delay: 5047 ms
+95th percentile signal delay: 12251 ms
+average per packet delay: 1744 ms
+41
+1363038
+++++++++++++++++++++++++++++++++
+up-vegas
+Average capacity: 9.74 Mbits/s
+Average throughput: 6.20 Mbits/s (63.6% utilization)
+95th percentile per-packet queueing delay: 87 ms
+95th percentile signal delay: 452 ms
+average per packet delay: 23 ms
+41
+1363039
+++++++++++++++++++++++++++++++++
+down-verus
+Average capacity: 9.74 Mbits/s
+Average throughput: 9.27 Mbits/s (95.2% utilization)
+95th percentile per-packet queueing delay: 411 ms
+95th percentile signal delay: 1977 ms
+average per packet delay: 191 ms
+41
+1363038
+++++++++++++++++++++++++++++++++
+up-sprout
+Average capacity: 9.74 Mbits/s
+Average throughput: 5.91 Mbits/s (60.6% utilization)
+95th percentile per-packet queueing delay: 60 ms
+95th percentile signal delay: 174 ms
+average per packet delay: 26 ms
+453
+1363038
+++++++++++++++++++++++++++++++++
+up-bbr
+Average capacity: 9.74 Mbits/s
+Average throughput: 8.87 Mbits/s (91.1% utilization)
+95th percentile per-packet queueing delay: 171 ms
+95th percentile signal delay: 734 ms
+average per packet delay: 62 ms
+41
+1363038
+++++++++++++++++++++++++++++++++
+up-c2tcp
+Average capacity: 9.74 Mbits/s
+Average throughput: 8.17 Mbits/s (83.8% utilization)
+95th percentile per-packet queueing delay: 87 ms
+95th percentile signal delay: 480 ms
+average per packet delay: 34 ms
+42
+1363038
+++++++++++++++++++++++++++++++++
+up-codel
+Average capacity: 9.74 Mbits/s
+Average throughput: 7.19 Mbits/s (73.8% utilization)
+95th percentile per-packet queueing delay: 55 ms
+95th percentile signal delay: 486 ms
+average per packet delay: 19 ms
+41
+1363038
+++++++++++++++++++++++++++++++++

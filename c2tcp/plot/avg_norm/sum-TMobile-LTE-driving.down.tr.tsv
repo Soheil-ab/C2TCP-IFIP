@@ -1,0 +1,9 @@
+protocol	down	throughput	delay	delay_95th	avg_delay	avg_capacity
+Cubic	sum-TMobile-LTE-driving.down.tr	12.71	5012	3685	1254	12.80
+NReno	sum-TMobile-LTE-driving.down.tr	12.72	4383	3385	1154	12.80
+Vegas	sum-TMobile-LTE-driving.down.tr	9.56	1057	977	221	12.80
+Verus	sum-TMobile-LTE-driving.down.tr	12.02	1365	665	224	12.80
+Sprout	sum-TMobile-LTE-driving.down.tr	7.43	244	100	31	12.80
+BBR	sum-TMobile-LTE-driving.down.tr	10.88	384	192	66	12.80
+C2TCP	sum-TMobile-LTE-driving.down.tr	9.33	337	115	39	12.80
+Codel_Cubic	sum-TMobile-LTE-driving.down.tr	7.55	308	98	29	12.80

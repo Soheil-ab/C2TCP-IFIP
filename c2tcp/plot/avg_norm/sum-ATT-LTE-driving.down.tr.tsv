@@ -1,0 +1,9 @@
+protocol	down	throughput	delay	delay_95th	avg_delay	avg_capacity
+Cubic	sum-ATT-LTE-driving.down.tr	5.18	11378	8823	3133	5.19
+NReno	sum-ATT-LTE-driving.down.tr	5.18	6753	4892	1796	5.19
+Vegas	sum-ATT-LTE-driving.down.tr	2.27	483	62	27	5.19
+Verus	sum-ATT-LTE-driving.down.tr	4.91	1164	388	223	5.19
+Sprout	sum-ATT-LTE-driving.down.tr	3.22	187	64	37	5.19
+BBR	sum-ATT-LTE-driving.down.tr	4.68	639	107	48	5.19
+C2TCP	sum-ATT-LTE-driving.down.tr	4.13	549	85	47	5.19
+Codel_Cubic	sum-ATT-LTE-driving.down.tr	3.92	553	69	32	5.19

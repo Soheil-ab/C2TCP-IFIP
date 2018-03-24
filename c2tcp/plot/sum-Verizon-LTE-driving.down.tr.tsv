@@ -1,0 +1,9 @@
+protocol	down	throughput	delay	delay_95th	avg_delay	avg_capacity
+Cubic	sum-Verizon-LTE-driving.down.tr	9.66	11236	5356	1678	9.74
+NReno	sum-Verizon-LTE-driving.down.tr	9.69	12251	5047	1744	9.74
+Vegas	sum-Verizon-LTE-driving.down.tr	6.20	452	87	23	9.74
+Verus	sum-Verizon-LTE-driving.down.tr	9.27	1977	411	191	9.74
+Sprout	sum-Verizon-LTE-driving.down.tr	5.91	174	60	26	9.74
+BBR	sum-Verizon-LTE-driving.down.tr	8.87	734	171	62	9.74
+C2TCP	sum-Verizon-LTE-driving.down.tr	8.17	480	87	34	9.74
+Codel_Cubic	sum-Verizon-LTE-driving.down.tr	7.19	486	55	19	9.74

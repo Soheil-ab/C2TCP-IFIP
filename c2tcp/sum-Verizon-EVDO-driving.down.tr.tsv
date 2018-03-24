@@ -1,0 +1,9 @@
+protocol	down	throughput	delay	delay_95th	avg_delay	avg_capacity
+Cubic	sum-Verizon-EVDO-driving.down.tr	0.52	111415	86570	33166	0.52
+NReno	sum-Verizon-EVDO-driving.down.tr	0.52	83274	50569	25916	0.52
+Vegas	sum-Verizon-EVDO-driving.down.tr	0.36	2923	340	108	0.52
+Verus	sum-Verizon-EVDO-driving.down.tr	0.45	5760	913	458	0.52
+Sprout	sum-Verizon-EVDO-driving.down.tr	0.23	2168	769	272	0.52
+BBR	sum-Verizon-EVDO-driving.down.tr	0.44	5113	689	226	0.52
+C2TCP	sum-Verizon-EVDO-driving.down.tr	0.38	2271	309	104	0.52
+Codel_Cubic	sum-Verizon-EVDO-driving.down.tr	0.37	1991	236	82	0.52

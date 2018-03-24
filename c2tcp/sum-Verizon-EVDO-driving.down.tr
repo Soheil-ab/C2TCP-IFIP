@@ -1,0 +1,72 @@
+up-cubic
+Average capacity: 0.52 Mbits/s
+Average throughput: 0.52 Mbits/s (99.9% utilization)
+95th percentile per-packet queueing delay: 86570 ms
+95th percentile signal delay: 111415 ms
+average per packet delay: 33166 ms
+40
+1062016
+++++++++++++++++++++++++++++++++
+up-newreno
+Average capacity: 0.52 Mbits/s
+Average throughput: 0.52 Mbits/s (99.9% utilization)
+95th percentile per-packet queueing delay: 50569 ms
+95th percentile signal delay: 83274 ms
+average per packet delay: 25916 ms
+42
+1062016
+++++++++++++++++++++++++++++++++
+up-vegas
+Average capacity: 0.52 Mbits/s
+Average throughput: 0.36 Mbits/s (69.8% utilization)
+95th percentile per-packet queueing delay: 340 ms
+95th percentile signal delay: 2923 ms
+average per packet delay: 108 ms
+42
+1062016
+++++++++++++++++++++++++++++++++
+down-verus
+Average capacity: 0.52 Mbits/s
+Average throughput: 0.45 Mbits/s (86.5% utilization)
+95th percentile per-packet queueing delay: 913 ms
+95th percentile signal delay: 5760 ms
+average per packet delay: 458 ms
+41
+1062016
+++++++++++++++++++++++++++++++++
+up-sprout
+Average capacity: 0.52 Mbits/s
+Average throughput: 0.23 Mbits/s (44.5% utilization)
+95th percentile per-packet queueing delay: 769 ms
+95th percentile signal delay: 2168 ms
+average per packet delay: 272 ms
+488
+1062016
+++++++++++++++++++++++++++++++++
+up-bbr
+Average capacity: 0.52 Mbits/s
+Average throughput: 0.44 Mbits/s (83.7% utilization)
+95th percentile per-packet queueing delay: 689 ms
+95th percentile signal delay: 5113 ms
+average per packet delay: 226 ms
+41
+1062016
+++++++++++++++++++++++++++++++++
+up-c2tcp
+Average capacity: 0.52 Mbits/s
+Average throughput: 0.38 Mbits/s (72.4% utilization)
+95th percentile per-packet queueing delay: 309 ms
+95th percentile signal delay: 2271 ms
+average per packet delay: 104 ms
+42
+1062016
+++++++++++++++++++++++++++++++++
+up-codel
+Average capacity: 0.52 Mbits/s
+Average throughput: 0.37 Mbits/s (70.6% utilization)
+95th percentile per-packet queueing delay: 236 ms
+95th percentile signal delay: 1991 ms
+average per packet delay: 82 ms
+41
+1062016
+++++++++++++++++++++++++++++++++
