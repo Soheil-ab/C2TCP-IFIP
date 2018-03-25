@@ -1,16 +1,15 @@
-# C2TCP v1.0
+# C2TCP v2.0
+
+This is C2TCP: A Cellular Controlled delay TCP.
 
 Installation Guide
 ==================
 
-Here we will provide you with a guides to do the tests on single machine. 
-All schemes and tools are tested on Ubuntu 14.04 except BBR which requires Ubuntu 16.04 and above (here it is tested on Ubuntu 17.04)
-If you are going to test BBR and won't like to chage the kernel manually each time, we recommend using two macines (or VMs) one with Ubuntu 14.04 for the tests with all schemes except BBR and the other with Ubuntu 17.04 for BBR.
-If not, simply skip the Build BBR, and continue with the instructions.
+Here we will provide you with detailed instructions to test C2TCP on single machine.
 
 ### Getting the Source Code:
 
-Note: C2TCP is implemented on Linux kernel 3.13.0 (Ubuntuu 14.04). 
+Note: C2TCP is implemented on Linux kernel 4.13.1. 
 
 Get the source code:
 
@@ -21,9 +20,7 @@ Get the source code:
 
 ### Installing Required Tools
 
-General Note: Installing any of the following tools/schemes, depending on your machine, might require other libraries (in addition to what have been mentioned here). So, if you get any errors of someting not being found when you try to `make`, install them using `apt-get`.
-(Since C2TCP is applied to Kernel 3.13, we recommend using Ubuntu 14.04 as the base).
-
+General Note: Installing any of the following tools/schemes, depending on your machine, might require other libraries (in addition to what have been mentioned here). So, if you get any errors mentioning that something not being found when you try to `make`, install them using `apt-get`.
 
 1. Install Mahimahi (http://mahimahi.mit.edu/#getting)
 
@@ -45,12 +42,8 @@ General Note: Installing any of the following tools/schemes, depending on your m
 
 ### Installing Other Schemes 
 
-Optional: You can skip each of these parts if you wanna just run evaluation for C2TCP, Cubic, Vegas, and NewReno.
+BBR, C2TCP, Vegas, Reno, and Cubic are already part of the patch. To install Sprout and Verus follow the following instructions: 
 
-Notice: BBR already has been pushed to Kernel 4.10 (Ubuntu 16.04). So we recommend you to install it on a separate VM (or machine). 
-Our tests with BBR have been done on Ubuntu 17.04. If you want to install it on the same machine where you have installed other schemes, remember that you should handle changing the kernel back to 3.13.0 manually for the test of other schemes.
-(Other schemes have been recommanded to be isntalled (& tested) on Ubuntu 14.04 (Kernel 3.13))
-	
 1. Build Sprout (http://alfalfa.mit.edu/)
 
 	```sh  
@@ -70,45 +63,38 @@ Our tests with BBR have been done on Ubuntu 17.04. If you want to install it on 
 	autoreconf -i
 	./configure && make
 	```
-3. Build BBR (http://queue.acm.org/detail.cfm?id=3022184)
-
-	```sh
-	wget http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.10-rc1/linux-image-4.10.0-041000rc1-generic_4.10.0-041000rc1.201612252031_amd64.deb
-	dpkg -i linux-image-4.10.0*.deb
-	update-grub
-	reboot
-	
-	#After reboot
-	uname -a
-	```
-
-	Enablabe BBR and check it:
-		
-	```sh
-	echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
-	sysctl -p
-		
-	#Check bbr
-	
-	sysctl net.ipv4.tcp_available_congestion_control
-	lsmod | grep bbr
-	```
 
 ### Adding C2TCP to Kernel
+
+### Option 1:
+
+Simply install the debian packages of the patched kernel:
+
+    ```sh
+    cd ~/c2tcp/
+    sudo dpkg -i linux-image*
+    sudo dpkg -i linux-header*
+    sudo reboot 
+    uname -r
+    ```
+    
+### Option 2:
+
+Build kernel from source file.
 
 1. Get the kernel:
 
 	```sh
 	cd ~/c2tcp/
-	wget http://www.kernel.org/pub/linux/kernel/v3.0/linux-3.13.tar.gz
-	tar -xzf linux-3.13.tar.gz
+	wget http://www.kernel.org/pub/linux/kernel/v4.0/linux-4.13.1.tar.gz
+	tar -xzf linux-4.13.1.tar.gz
 	```
 	
 2. Apply C2TCP patch to the kernel
 
 	```sh
-	cd linux-3.13
-	patch -p1 < ../c2tcp/c2tcp.kernel.3.13.patch
+	cd linux-4.13.1
+	patch -p1 < ../c2tcp/c2tcp.kernel.4.13.1.patch
 	```
 3. Prepare it for being compiled:
 
@@ -126,7 +112,9 @@ Our tests with BBR have been done on Ubuntu 17.04. If you want to install it on 
 	Return to the first menu. Go to "Device Drivers" and disable "staging drivers"
 	
 	(You can uncheck different drivers to expedite the compilation)
-	
+    
+    If you want to have BBR and Vegas protocols, you need to select them in this step, before compiling the kernel.
+
 	Exit from Kernel Configuration window saving the changes on .config file. 
 	
 4. Compile the kenel:
@@ -157,7 +145,7 @@ Our tests with BBR have been done on Ubuntu 17.04. If you want to install it on 
 	sudo apt-get install grub-pc
 	sudo upgrade-from-grub-legacy
 	sudo update-grub
-	sudo update-initramfs -k 3.13.0 -u
+	sudo update-initramfs -k 4.13.1 -u
 	sudo update-grub
 	```
 	You might be aked to configure grub and install it on your partions. So follow the instructions on screen to do that.
@@ -170,14 +158,14 @@ Our tests with BBR have been done on Ubuntu 17.04. If you want to install it on 
 	sudo apt-get install grub-customizer
 	```
 	
-	Then open grub-customizer and bring 3.13.0 at the first line (and its recovery at the second line), Save and Restart.
+	Then open grub-customizer and bring 4.13.1.0 at the first line (and its recovery at the second line), Save and Restart.
 
 7. Verify the new kernel.
 
 	```sh
 	uname -r
 	```
-	You should see 3.13.0.
+	You should see 4.13.1.0.
 	
 	Check whether C2TCP is there:
 	
@@ -212,5 +200,4 @@ Here, we run C2TCP (with Target=100ms, Interval=100ms), Cubic, TCP Vegas, and Ne
 After that, you can check summary of results:	
 
 	 cat sum/summary-20-TMobile-LTE-driving.down-TMobile-LTE-driving.up-20-480.txt
-	
-(Note: Here, we run evalaution on single machine. To run them on seprate machines (like Fig.5 in the paper) you need to run different components of the script (server, client, emulator) on your designated machines.)
+
