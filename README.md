@@ -94,7 +94,7 @@ Build kernel from source file.
 
 	```sh
 	cd linux-4.13.1
-	patch -p1 < ../c2tcp/c2tcp.kernel.4.13.1.patch
+	patch -p1 < ~/c2tcp/c2tcp.kernel.4.13.1.patch
 	```
 3. Prepare it for being compiled:
 
