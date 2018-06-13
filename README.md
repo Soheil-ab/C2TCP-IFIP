@@ -1,4 +1,4 @@
-# C2TCP v2.0
+# C2TCP v1.0
 
 This is C2TCP: A Cellular Controlled delay TCP.
 
