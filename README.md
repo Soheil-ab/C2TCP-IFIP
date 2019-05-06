@@ -1,6 +1,6 @@
 # C2TCP v1.0
 
-This is the first version of C2TCP: A Cellular Controlled delay TCP presented at IFIP Networking Conference (C2TCP paper can be accessed at: https://wp.nyu.edu/c2tcp/publications/ ).
+This is the first version of C2TCP: A Cellular Controlled delay TCP presented at IFIP Networking 2018 Conference (https://doi.org/10.23919/IFIPNetworking.2018.8696844 , https://wp.nyu.edu/c2tcp/publications/ , https://arxiv.org/abs/1807.02689 ).
 
 Installation Guide
 ==================
