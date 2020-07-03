@@ -2,6 +2,8 @@
 
 This is the first version of C2TCP: A Cellular Controlled delay TCP presented at IFIP Networking 2018 Conference (https://doi.org/10.23919/IFIPNetworking.2018.8696844 , https://wp.nyu.edu/c2tcp/publications/ , https://arxiv.org/abs/1807.02689 ).
 
+For the second version of C2TCP published in IEEE JSAC 2019 (C2TCP: A Flexible Cellular TCP to Meet Stringent Delay Requirements, available at: https://ieeexplore.ieee.org/abstract/document/8638955), please check out: https://github.com/Soheil-ab/c2tcp
+
 Installation Guide
 ==================
 
